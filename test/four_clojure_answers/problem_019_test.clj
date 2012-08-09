@@ -4,7 +4,7 @@
 
 (deftest problem-019-test
     (are [coll expected]
-      (= (problem-019 coll) expected)
+      (= (answer-019 coll) expected)
       [1 2 3 4 5] 5
       '(5 4 3) 3
       ["b" "c" "d"] "d"
