@@ -8,5 +8,4 @@
         (recur (rest c) (inc cnt))))))
 
 (def answer-022-b
-  (comp (partial apply +)
-        (partial map (constantly 1))))
+  (partial reduce (fn [c _] (inc c)) 0))
