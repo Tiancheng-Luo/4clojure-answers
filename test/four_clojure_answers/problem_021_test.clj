@@ -4,7 +4,7 @@
 
 (deftest problem-021-test
   (are [coll idx expected]
-    (= (answer-021 coll idx) expected)
+    (= (answer coll idx) expected)
     '(4 5 6 7) 2 6
     [:a :b :c] 0 :a
     [1 2 3 4] 1 2

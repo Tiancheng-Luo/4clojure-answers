@@ -4,7 +4,7 @@
 
 (deftest problem-024-test
   (are [coll expected]
-    (= (answer-024 coll) expected)
+    (= (answer coll) expected)
     [1 2 3] 6
     (list 0 -2 5 5) 8
     #{4 2 1} 7

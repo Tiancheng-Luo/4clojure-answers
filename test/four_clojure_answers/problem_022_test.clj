@@ -3,7 +3,7 @@
         clojure.test))
 
 (deftest problem-022-test
-  (doseq [answer [answer-022-a answer-022-b]]
+  (doseq [answer [answer-a answer-b]]
     (are [coll expected]
       (= (answer coll) expected)
       '(1 2 3 3 1) 5
