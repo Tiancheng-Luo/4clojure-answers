@@ -2,4 +2,4 @@
 
 (def answer
   (fn [sep coll]
-    (butlast (interleave coll (repeat sep))))
+    (drop 1 (interleave (repeat sep) coll))))
