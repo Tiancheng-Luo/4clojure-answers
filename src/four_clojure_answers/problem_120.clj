@@ -15,16 +15,15 @@
       (partial filter smaller-than-sum-square-digits?))))
 
 (def answer-b
-  (letfn
-    [(smaller-than-sum-square-digits? [n]
-       (< n (sum-square-digits n)))
-     (sum-square-digits [n]
-       (->> n
-         str
-         (re-seq #".")
-         (map #(Integer/valueOf %))
-         (map #(* % %))
-         (reduce +)))]
+  (letfn [(smaller-than-sum-square-digits? [n]
+            (< n (sum-square-digits n)))
+          (sum-square-digits [n]
+            (->> n
+              str
+              (re-seq #".")
+              (map #(Integer/valueOf %))
+              (map #(* % %))
+              (reduce +)))]
     (comp
       count
       (partial filter smaller-than-sum-square-digits?))))
