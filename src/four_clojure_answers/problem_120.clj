@@ -2,12 +2,13 @@
 
 (def answer-a
   (letfn [(smaller-than-sum-square-digits? [n]
-            (< n (sum-square-digits n 0)))
-          (sum-square-digits [n sum]
-            (if (zero? n)
-              sum
-              (recur (quot n 10)
-                     (+ sum (square (rem n 10))))))
+            (< n (sum-square-digits n)))
+          (sum-square-digits [n]
+            (loop [n n sum 0]
+              (if (zero? n)
+                sum
+                (recur (quot n 10)
+                       (+ sum (square (rem n 10)))))))
           (square [n]
             (* n n))]
     (comp
