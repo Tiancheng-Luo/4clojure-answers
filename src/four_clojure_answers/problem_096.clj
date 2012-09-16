@@ -2,8 +2,7 @@
 
 (def answer
   (fn [[_ l r]]
-    (letfn
-      [(mirror [t]
-         (when-let [[v l r] t]
-           [v (mirror r) (mirror l)]))]
+    (letfn [(mirror [t]
+              (when-let [[v l r] t]
+                [v (mirror r) (mirror l)]))]
       (= l (mirror r)))))
