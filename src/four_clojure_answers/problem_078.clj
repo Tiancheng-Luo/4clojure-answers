@@ -2,7 +2,7 @@
 
 (def answer
   (fn [f & args]
-    (loop [g (apply f args)]
-      (if (fn? g)
-        (recur (g))
-        g))))
+    (loop [r (apply f args)]
+      (if (fn? r)
+        (recur (r))
+        r))))
